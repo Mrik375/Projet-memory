@@ -1,4 +1,3 @@
-
 .solarmemory {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -6,8 +5,8 @@
     gap: 15px;
     width: fit-content;
     height: fit-content;
+    position: relative;
 }
-
   /* Styles de base pour chaque carte */
   .memory-card {
     display: flex;
@@ -18,9 +17,7 @@
     transform-style: preserve-3d;
     transition: transform 0.3s;
     cursor: pointer;
-    aspect-ratio: 1 / 1;
-  }
-  
+  }  
   /* Face visible de la carte */
   .memory-card .front-face,
   .memory-card .back-face {
@@ -29,8 +26,7 @@
     height: 170px;
     backface-visibility: hidden;
     border-radius: 10px;
-  }
-  
+  }  
   /* Face arrière de la carte */
   .memory-card .back-face {
     background: #2e3a46;
@@ -39,8 +35,7 @@
     align-items: center;
     color: white;
     font-size: 2em;
-  }
-  
+  }  
   /* Face avant de la carte */
   .memory-card .front-face {
     background: white;
@@ -48,9 +43,25 @@
     justify-content: center;
     align-items: center;
     transform: rotateY(180deg);
-  }
-  
+  }  
   /* Effet de rotation pour la carte retournée */
   .memory-card.flip {
     transform: rotateY(180deg);
+  }
+
+  /***** tableau des scores *****/
+  .score {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 42rem;
+    color: white;
+    background-color: rgba(29, 27, 27, 0.911);
+    border: solid white 3px;
+    border-radius: 10px 10px 0px 0px;
+    border-collapse: collapse;
+  }
+  .score th {
+    width: 20vw;
+    border: solid white 1px;
   }
