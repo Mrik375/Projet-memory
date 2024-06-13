@@ -19,8 +19,8 @@
     cursor: pointer;
   }  
   /* Face visible de la carte */
-  .memory-card .front-face,
-  .memory-card .back-face {
+  .front-face,
+  .back-face {
     position: absolute;
     width: 140px;
     height: 170px;
@@ -28,7 +28,7 @@
     border-radius: 10px;
   }  
   /* Face arrière de la carte */
-  .memory-card .back-face {
+  .back-face {
     background: #2e3a46;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@
     font-size: 2em;
   }  
   /* Face avant de la carte */
-  .memory-card .front-face {
+  .front-face {
     background: white;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@
     transform: rotateY(180deg);
   }  
   /* Effet de rotation pour la carte retournée */
-  .memory-card.flip {
+  .flip {
     transform: rotateY(180deg);
   }
 

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() { //Charge le DOM avant lecture JS
 
   const cardData = [
     { name: "babypupa", img: "/img/babypupa.jpg" },
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const memoryGameContainer = document.querySelector(".solarmemory"); // Séléctionne section où placer cards
 
-  function createCardElement(card) { // Créé élément card pour la carte, créé une div avec name et id
+  function createCardElement(card) { // Créé élément card pour la carte, créé une div avec id
     const cardElement = document.createElement("div");
     cardElement.classList.add("memory-card");
     cardElement.dataset.name = card.name;
@@ -124,9 +124,11 @@ function playFlipSound() { // Fonction pour jouer le son de retournement de cart
   cards.forEach(card => card.addEventListener("click", handleCardClick));
 
   function showVictory() {
+    setTimeout(function() { // Ajout de tempo pour laisser card se retourner avant affichage
     victoryMessage.classList.add("active");
     victoryMessage.style.display = "block"; // Affiche la div "victoire"
     gameActive = false; // Désactive le jeu actif pour permettre le redémarrage
+    }, 400);
 }
   // Fonction pour mélanger les cartes
   function shuffleCards() {
